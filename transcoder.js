@@ -25,11 +25,11 @@ const transcode = (url) => {
       "-keyint_min",
       "48", // Minimum GOP size
       "-b:v",
-      resolution?.bitrate, // Video bitrate
+      "800k", // Video bitrate
       "-maxrate",
-      `${parseInt(resolution?.bitrate) * 1.07}k`, // Maximum bitrate
+      `${parseInt("800k") * 1.07}k`, // Maximum bitrate
       "-bufsize",
-      `${parseInt(resolution?.bitrate) * 1.5}k`, // Buffer size
+      `${parseInt("800k") * 1.5}k`, // Buffer size
       "-b:a",
       "128k",
     ])
